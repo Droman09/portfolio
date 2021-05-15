@@ -332,6 +332,12 @@ nav {
   position: relative;
   margin: 1rem;
 }
+.info-box{
+  position: relative;;
+  margin: 1rem;
+  width: 15rem;
+  padding: 0 0.5rem;
+}
 
 /* overflow */
 

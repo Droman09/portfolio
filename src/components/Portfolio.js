@@ -4,7 +4,7 @@ import Weather from "../images/weather_app.png"
 import Pop from "../images/pop_quiz.png"
 import Culture from "../images/culture.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faSearchPlus} from "@fortawesome/free-solid-svg-icons"
+import { faAngleUp} from "@fortawesome/free-solid-svg-icons"
 
 
 const Portfolio = () => {
@@ -46,15 +46,19 @@ const Portfolio = () => {
                 <div className="container">
                     <h1 className="text-uppercase text-center py-5">portfolio</h1>
                     <div className="image-box-wrapper row justify-content-center">
-                    {projectArr.map(index => {
-                        return (
-                                <div className="portfolio-image-box">
-                                    <img className="portfolio-image" src={index.picture} alt={index.title}></img>
-                                    <div className="overflow"></div>
-                                    <FontAwesomeIcon className="portfolio-icon" icon={faSearchPlus} />
+                        {projectArr.map(index => {
+                            return (
+                                <div>
+                                    <div className="info-box"><p>{index.title}</p></div>
+                                    <div className="portfolio-image-box">
+                                        <img className="portfolio-image" src={index.picture} alt={index.title}></img>
+                                        <div className="overflow" onClick={() => window.open(index.website)}></div>
+                                        <FontAwesomeIcon className="portfolio-icon" icon={faAngleUp} />
+                                    </div>
+                                    <div className="info-box"><p>{index.description}</p></div>
                                 </div>
-                        )
-                    })}
+                            )
+                        })}
                     </div>
                 </div>
             </div>
